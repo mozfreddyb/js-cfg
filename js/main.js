@@ -41,22 +41,20 @@ window.onload = function() {
     if (txt != "") {
       var ast = esprima.parse(txt);
       var g = new BasicBlockView(ast);
-      var svg = Viz(g.toDot(), 'svg');
+      var svg = new Viz(g.toDot(), 'svg');
       var svgarea = document.getElementById("svgarea");
-      svgarea.innerHTML += svg;
+      svgarea.innerHTML = svg;
     }
-  })
+  });
 
   document.getElementById('files').addEventListener('change', handleFile, false);
 
-}
+};
 
 
  function handleFile(evt) {
     var files = evt.target.files;
-    var output = [];
     for (var i = 0, f; f = files[i]; i++) {
-      ///
       if (!f.type.match('text.*')) {
         console.log("Skipped invalid file format " + f.type );
         continue;
@@ -64,9 +62,8 @@ window.onload = function() {
 
       var reader = new FileReader();
       reader.onload = (function(aFile) {
-        return function(e) {
-          var text = e.target.result;
-          document.getElementById("jscode").value = text;
+        return function(aEvt) {
+          document.getElementById("jscode").value = aEvt.target.result;
         };
       })(f);
       reader.readAsText(f);
