@@ -41,7 +41,7 @@ window.onload = function() {
     if (txt != "") {
       var ast = esprima.parse(txt);
       var g = new BasicBlockView(ast);
-      var svg = new Viz(g.toDot(), 'svg');
+      var svg = Viz(g.toDot(), 'svg');
       var svgarea = document.getElementById("svgarea");
       svgarea.innerHTML = svg;
     }
