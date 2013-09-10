@@ -33,7 +33,6 @@ window.onload = function() {
   document.getElementById('files').addEventListener('change', handleFile, false);
 };
 
-
  function handleFile(evt) {
     var files = evt.target.files;
     for (var i = 0, f; f = files[i]; i++) {
