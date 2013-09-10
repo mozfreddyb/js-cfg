@@ -45,10 +45,10 @@ function BasicBlockView(ast) {
     nd.data.text +=  code+"\n";
   }
   this.ast2blocks = function (astNode, settings) { // init ..
-    console.group();
+    /*console.group();
     console.log(astNode.type);
     console.log(codeGen(astNode));
-    console.groupEnd();
+    console.groupEnd();*/
     switch (astNode.type) {
       case 'BlockStatement':
         // a piece of code enclosed by { and }. fall through---v

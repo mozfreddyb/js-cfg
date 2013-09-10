@@ -17,18 +17,18 @@
         }
     </style>
 
-    <title>let's test the graph</title>
+    <title>(Naive) JavaScript Control Flow Graphs</title>
 </head>
 <body>
 
 
-<p><strong>Select a JavaScript to be rendered.</strong><br>
+<p><strong>Provide me some JavaScript to be rendered.</strong><br>
     You can either select a file from your disk or you can just copy&paste the source into this text area
 </p>
 <input type="file" id="files" name="files[]" multiple />
 <br>
     <textarea id="jscode"></textarea>
-
+<br>
 <input type="button" value="Paint CFG" id="btnGenerate"><br>
     <hr>
 
@@ -36,10 +36,7 @@
     <script src="js/viz.js"></script>
     <script src='js/main.js'></script>
 
-<div id="svgarea">
-
-
-</div>
+<div id="svgarea"></div>
 <footer>
     Credit where credit is due:
     This tiny experiment has been made possible by the awesome developers of tools like
