@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+      Credit where credit is due
+    -->
+    <script src="js/esprima.js"></script>
+    <script src="js/escodegen.browser.js" charset="UTF-8"></script>
+    <script src='js/graph.js'></script>
+    <script src='js/basicblocks.js'></script>
+
+
+    <style>
+        #jscode {width:20%;height:100px}
+        footer {
+            font-size: 9pt;
+        }
+    </style>
+
+    <title>let's test the graph</title>
+</head>
+<body>
+
+
+<p><strong>Select a JavaScript to be rendered.</strong><br>
+    You can either select a file from your disk or you can just copy&paste the source into this text area
+</p>
+<input type="file" id="files" name="files[]" multiple />
+<br>
+    <textarea id="jscode"></textarea>
+
+<input type="button" value="Paint CFG" id="btnGenerate"><br>
+    <hr>
+
+
+    <script src="js/viz.js"></script>
+    <script src='js/main.js'></script>
+
+<div id="svgarea">
+
+
+</div>
+<footer>
+    Credit where credit is due:
+    This tiny experiment has been made possible by the awesome developers of tools like
+    <a href="http://esprima.org/">Esprima</a>,
+    <a href="http://github.com/Constellation/escodegen">Escodegen</a>,
+    and
+    <a href="https://github.com/mdaines/viz.js">Viz.js</a>. Thank you!
+    <small>Made by @freddyb</small>.
+</footer>
+</body>
+</html>
