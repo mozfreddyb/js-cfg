@@ -46,7 +46,6 @@ window.onload = function() {
       svgarea.innerHTML = svg;
     }
   });
-
   document.getElementById('files').addEventListener('change', handleFile, false);
 
 };
