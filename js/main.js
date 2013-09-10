@@ -36,7 +36,7 @@ window.onload = function() {
  function handleFile(evt) {
     var files = evt.target.files;
     for (var i = 0, f; f = files[i]; i++) {
-      if (!f.type.match('text.*')) {
+      if ((!f.type.match('text.*')) && (!f.type.match("application.*"))) {
         console.log("Skipped invalid file format " + f.type );
         continue;
       }
